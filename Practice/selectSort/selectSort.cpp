@@ -1,10 +1,19 @@
-﻿// selectSort.cpp : 定义静态库的函数。
-//
+﻿#include"selectSort.h"
 
-#include "pch.h"
-#include "framework.h"
-
-// TODO: 这是一个库函数示例
-void fnselectSort()
+void selectSort(int arr[],int n)
 {
+	for (auto i = 0; i < n - 1; i++)
+	{
+		auto k = i;
+		for (auto j = i + 1; j < n; j++)
+		{
+			if (arr[j] < arr[k])
+			{
+				k = j;
+			}
+		}
+		auto x = arr[k];
+		arr[k] = arr[i];
+		arr[i] = x;
+	}
 }
