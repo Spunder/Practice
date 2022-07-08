@@ -2,7 +2,7 @@
 #ifndef _quickSort_H
 #define _quickSort_H
 
-void QuickSort(int left, int right, int arr[]);
+void QuickSort(int l, int h, int arr[]);
 
 #endif // !_quickSort_H
 

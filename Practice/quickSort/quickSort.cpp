@@ -1,14 +1,14 @@
 #include"quickSort.h"
 
-void QuickSort(int left, int right, int arr[])
+void QuickSort(int l, int h, int arr[])
 {
-	if (left >= right)
+	if (l >= h)
 	{
 		return;
 	}
-	auto i = left;
-	auto j = right;
-	auto base = arr[left];
+	auto i = l;
+	auto j = h;
+	auto base = arr[l];
 	while (i < j) 
 	{
 		while (arr[j] >= base && i < j)
@@ -26,8 +26,8 @@ void QuickSort(int left, int right, int arr[])
 			arr[j] = temp;
 		}
 	}
-	arr[left] = arr[i];
+	arr[l] = arr[i];
 	arr[i] = base;
-	QuickSort(left, i - 1, arr);
-	QuickSort(i + 1, right, arr);
+	QuickSort(l, i - 1, arr);
+	QuickSort(i + 1, h, arr);
 }
